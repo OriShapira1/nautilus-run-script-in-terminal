@@ -1,5 +1,5 @@
 # Nautilus run script in terminal
-A nautilus context menu extension meant to open a script in the gnome terminal
+A nautilus context menu extension meant to open a script (.sh) in the gnome terminal
 
 ## How to install 
 #### clone the repository to your home folder:
