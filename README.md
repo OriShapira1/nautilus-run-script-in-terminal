@@ -33,8 +33,9 @@ $ nautilus -q
 If that doesn't work try logging out and back in. 
 
 ## Optional - configure settings
-#### Only files with execution permissions
+### Only files with execution permissions
 Files without execution permissions will not trigger the context menu.
+
 In the Python file change check_perms from False to True:
 ```python
 class config():
@@ -43,14 +44,16 @@ class config():
 
     check_perms = True
 ```
-#### Only files with a secret key appended to them
-Files without the secret key will not trigger the context menu - avoids accidentally running untrusted scripts
+
+### Only files with a secret key appended to them
+Files without the secret key will not trigger the context menu - avoids accidentally running untrusted scripts\
 In the Python file change SECRET_KEY to the desired key:
 ```python
 class config():
 
     SECRET_KEY = 'Your-desired-key'
 ```
+
 Choose how many lines to check for the SECRET_KEY from the end of the file (not including whitespace only lines):
 ```python
 class config():
@@ -58,4 +61,9 @@ class config():
     ...
 
     lines_to_search_for_key = 20
+```
+The script will check for the existence of the sequence of characters without considering how it is implemented in the file (characters before or after, commented or not...), as long as it it in the lines searched.\
+Example: add the secret key to your .sh files as a comment:
+```bash
+# veryverysecretkey
 ```
