@@ -12,10 +12,10 @@ class config():
     SECRET_KEY = '' # set it to whatever you want
 
     # if enabled, the file will not be ran unless the key is present somewhere in the sh file
-    require_secret_key = True
+    require_secret_key = False
     lines_to_search_for_key = 20 # checked from the end of the file
     # if enabled, the file will not be ran unless the user has execution permissions to it
-    check_perms = True
+    check_perms = False
 
 class MyItemExtension(GObject.GObject, Nautilus.MenuProvider):
 
