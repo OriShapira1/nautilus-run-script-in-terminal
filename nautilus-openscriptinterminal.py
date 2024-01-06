@@ -76,5 +76,6 @@ class MyItemExtension(GObject.GObject, Nautilus.MenuProvider):
                     return False
                 if line.find(s_key) != -1:
                     return True
+        return False
 
 
